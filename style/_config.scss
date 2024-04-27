@@ -1,0 +1,21 @@
+/********
+COLORS
+*********/
+$black: rgb(18, 18, 18);
+$white: rgb(240, 240, 240);
+$grey: rgb(162, 162, 162);
+
+/********
+FONTS
+*********/
+$font: "Lato", sans-serif;
+$special: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+
+/********
+RESET
+*********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

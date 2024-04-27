@@ -1,0 +1,507 @@
+/*header*/
+header {
+  height: 60px;
+
+  .headText {
+    width: 90%;
+    margin: 0px auto;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 20px;
+  }
+
+  input {
+    opacity: 0;
+  }
+
+  label {
+    color: $white;
+    font-size: 22px;
+    float: right;
+    margin-top: 15px;
+  }
+
+  .ham_open {
+    transition: color 0.25s;
+  }
+
+  .ham_close {
+    display: none;
+    z-index: 10;
+    transition: color 0.25s;
+  }
+
+  .menu {
+    height: 0;
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    margin-top: 16px;
+    width: 100%;
+    z-index: 10;
+    background-color: $black;
+    transition: height 0.5s;
+
+    .menuText {
+      padding: 60px 0px;
+    }
+
+    a {
+      display: block;
+      font-size: 36px;
+      transition: color 0.25s;
+      text-align: center;
+      margin: 40px 0px;
+    }
+  }
+
+  .ham_check:checked ~ .ham_close {
+    display: block;
+  }
+
+  .ham_check:checked ~ .menu {
+    height: 100%;
+  }
+
+  .ham_check:checked ~ .ham_open {
+    display: none;
+  }
+}
+
+/*main*/
+main {
+  margin-top: 60px;
+  min-height: calc(100vh - 321px);
+
+  .restriction {
+    width: 90%;
+    margin: 0px auto;
+  }
+}
+
+//index
+.index {
+  .inOne {
+    height: calc(100vh - 60px);
+    min-height: 600px;
+    max-height: 800px;
+    width: 100%;
+    position: relative;
+
+    h1 {
+      font-size: calc(24px + 12vw);
+      text-align: left;
+      font-weight: 500;
+      line-height: 1.25;
+      max-width: 90%;
+
+      position: absolute;
+      top: calc(50% - 65px);
+      left: 5%;
+      -ms-transform: translateY(-50%); //internet explorer
+      transform: translateY(-50%);
+      z-index: 5;
+    }
+
+    h4 {
+      font-size: 26px;
+      margin: 0px 50%;
+      position: absolute;
+      bottom: 40px;
+      z-index: 5;
+    }
+
+    img {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      min-height: 600px;
+      object-fit: cover;
+      z-index: 1;
+      transition: opacity 0.5s;
+    }
+  }
+
+  .inTwo,
+  .inThree,
+  .inFour {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+
+    p {
+      font-size: 22px;
+      line-height: 1.5;
+      text-align: center;
+      width: 90%;
+      z-index: 5;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%); //internet explorer
+      transform: translate(-50%, -50%);
+    }
+
+    a {
+      width: 75%;
+
+      h3 {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 19px;
+        font-weight: 500;
+        width: 100%;
+      }
+    }
+
+    .inPlastic {
+      top: calc(5% + 60px);
+      left: 5%;
+      height: 20%;
+    }
+
+    .inGlitter {
+      top: calc(40% + 30px);
+      right: 5%;
+      height: 20%;
+    }
+
+    .inToxic {
+      top: 75%;
+      left: 10%;
+      height: 20%;
+    }
+
+    .inConsumer {
+      top: calc(15% + 60px);
+      right: 5%;
+      height: 25%;
+    }
+
+    .inCompany {
+      top: 60%;
+      left: 5%;
+      height: 25%;
+    }
+
+    .inAdvocacy {
+      top: calc(15% + 60px);
+      left: 5%;
+      height: 25%;
+    }
+
+    .inGreener {
+      top: 60%;
+      right: 5%;
+      height: 25%;
+    }
+  }
+}
+
+.issues,
+.action,
+.about,
+.resources {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 500;
+    padding-bottom: 16px;
+  }
+
+  p {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+}
+
+.issues,
+.action {
+  a {
+    display: block;
+    font-size: 22px;
+    padding: 11px 0px 11px 0px;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    &:hover + img,
+    &:focus + img {
+      opacity: 0.5;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 0;
+    width: 50%;
+    object-fit: cover;
+  }
+}
+
+//issues
+.issues {
+  .issOne {
+    margin-bottom: 60px;
+  }
+
+  .issTwo {
+    position: relative;
+    height: 395px;
+    padding-top: 60px;
+
+    img {
+      left: 0;
+      height: 395px;
+    }
+  }
+}
+
+/*take action*/
+.action {
+  .actOne {
+    margin-bottom: 60px;
+  }
+
+  .actTwo {
+    position: relative;
+    height: 310px;
+    padding-top: 100px;
+
+    img {
+      right: 0;
+      height: 310px;
+    }
+  }
+}
+
+/*content*/
+.content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .intro {
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 50px;
+    }
+
+    figure {
+      img {
+        height: 300px;
+        width: 90%;
+        margin: 0px 5% 0px 5%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  article {
+    section {
+      display: block;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 16px;
+      padding-top: 30px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    h4 {
+      font-size: 18px;
+      text-align: center;
+      font-style: italic;
+      font-weight: 400;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    .imageAcross {
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      figcaption {
+        font-size: 18px;
+        margin-top: 15px;
+        width: 100%;
+      }
+    }
+
+    .imageTall {
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+      img {
+        width: 76%;
+        height: auto;
+        margin-left: 12%;
+      }
+
+      figcaption {
+        font-size: 17px;
+        width: 100%;
+        margin-top: 15px;
+      }
+    }
+
+    .further {
+      a {
+        display: block;
+        width: 100%;
+        height: 86px;
+        border-bottom: 1px solid $grey;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        margin-top: 18px;
+        margin-bottom: 23px;
+
+        .p {
+          font-size: 18px;
+        }
+
+        .furtherTitle,
+        .furtherAuthor {
+          float: left;
+          clear: left;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  .noneBottom {
+    margin-bottom: 0px;
+  }
+
+  .next {
+    a {
+      position: fixed;
+      bottom: 20px;
+      font-size: 22px;
+      font-weight: 600;
+      padding: 4px 8px;
+      background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    .previous {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
+
+//about and resources overlap
+.about,
+.resources {
+  p {
+    margin-bottom: 30px;
+  }
+
+  .noneBottom {
+    margin-bottom: 0px;
+  }
+}
+
+/*resources*/
+.resources {
+  .resourcesTwo {
+    padding-top: 60px;
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 15px;
+    }
+
+    a {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .noneBottom {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+/*footer*/
+footer {
+  height: 275px;
+
+  .footText {
+    width: 90%;
+    margin: 0px auto;
+  }
+
+  .footPar {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .footMain {
+    display: block;
+    font-size: 18px;
+    padding-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .footSub {
+    display: none;
+  }
+
+  p {
+    float: left;
+    clear: left;
+    line-height: 1.5;
+    font-size: 16.5px;
+  }
+}

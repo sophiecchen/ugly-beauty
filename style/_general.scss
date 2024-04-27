@@ -1,0 +1,147 @@
+/********
+GENERAL SETTINGS
+*********/
+html {
+  scroll-behavior: smooth;
+}
+
+//text elements
+h1 {
+  font-family: $special;
+  color: $white;
+}
+
+h2,
+h3,
+h4,
+ul,
+p,
+figcaption {
+  font-family: $font;
+  color: $white;
+}
+
+a {
+  text-decoration: none;
+  font-family: $font;
+  color: $white;
+}
+
+//header, main, footer
+header {
+  background-color: $black;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+
+  .logo {
+    color: $white;
+    font-family: $font;
+  }
+
+  .menu a {
+    transition: color 0.25s;
+
+    &:hover,
+    &:focus {
+      color: $grey;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  background-color: $black;
+
+  a {
+    transition: color 0.25s;
+
+    &:hover,
+    &:focus {
+      color: $grey;
+    }
+  }
+
+  .intro,   //a side snippet
+  article,
+  .resourcesOne {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.index {
+  .inOne {
+    .gradient {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        115deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+      );
+      z-index: 2;
+      transition: opacity 0.5s;
+    }
+
+    .inNotHere {
+      opacity: 0;
+    }
+
+    .inHere {
+      opacity: 1;
+    }
+  }
+
+  .inTwo,
+  .inThree,
+  .inFour {
+    a {
+      display: block;
+      position: fixed;
+      transition: opacity 0.5s;
+      z-index: 2;
+
+      .overCont {
+        position: relative;
+        height: 100%;
+        height: 100%;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .inNotHere {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .inHere {
+      opacity: 0.5;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $black;
+  width: 100%;
+  border-top: 1px solid $white;
+  position: relative;
+  z-index: 8;
+
+  li {
+    list-style-type: none;
+  }
+}

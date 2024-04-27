@@ -1,0 +1,25 @@
+/*******
+IMPORTS
+********/
+@import "_config.scss";
+@import "_general.scss";
+
+@media only screen and (max-width: 576px) {
+  @import "_smallplus.scss";
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  @import "_small.scss";
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1025px) {
+  @import "_medium.scss";
+}
+
+@media only screen and (min-width: 1026px) and (max-width: 1350px) {
+  @import "_large.scss";
+}
+
+@media only screen and (min-width: 1351px) {
+  @import "_largeplus.scss";
+}
